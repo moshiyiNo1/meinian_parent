@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.dao.SetmealDao">
+
+    <select id="getSetmealAll" resultType="com.atguigu.pojo.Setmeal">
+         select * from t_setmeal
+    </select>
+
+    <resultMap id="SetmealResultMap" type="com.atguigu.pojo.Setmeal">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="code" column="code"/>
+        <result property="helpCode" column="helpCode"/>
+        <result property="sex" column="sex"/>
+        <result property="age" column="age"/>
+        <result property="price" column="price"/>
+        <result property="remark" column="remark"/>
+        <result property="attention" column="attention"/>
+        <result property="img" column="img"/>
+        <collection property="travelGroups" column="id"
+                    select="com.atguigu.dao.TravelGroupDao.findTravelGroupById"/>
+    </resultMap>
+    <select id="getSetmealDetail" resultMap="SetmealResultMap" parameterType="integer">
+        select * from t_setmeal where id = #{id}
+    </select>
+
+    <select id="getSetMealById" resultType="com.atguigu.pojo.Setmeal" parameterType="integer">
+        select * from t_setmeal where id = #{id}
+    </select>
+
+</mapper>

@@ -1,0 +1,6 @@
+0:0:0:0:0:0:0:1 - - [13/Jan/2021:11:45:51 +0800] "GET /pages/setmeal.html HTTP/1.1" 304 - http-bio-80-exec-1 61
+0:0:0:0:0:0:0:1 - - [13/Jan/2021:11:45:52 +0800] "POST /setmeal/getSetmeal.do HTTP/1.1" 200 6174 http-bio-80-exec-3 625
+0:0:0:0:0:0:0:1 - - [13/Jan/2021:11:45:54 +0800] "GET /pages/setmeal_detail.html?id=4 HTTP/1.1" 304 - http-bio-80-exec-4 3
+0:0:0:0:0:0:0:1 - - [13/Jan/2021:11:45:54 +0800] "POST /setmeal/findById.do?id=4 HTTP/1.1" 200 1030 http-bio-80-exec-5 45
+0:0:0:0:0:0:0:1 - - [13/Jan/2021:11:45:56 +0800] "GET /pages/orderInfo.html?id=4 HTTP/1.1" 200 9105 http-bio-80-exec-6 4
+0:0:0:0:0:0:0:1 - - [13/Jan/2021:11:45:56 +0800] "GET /setmeal/getSetMealById.do?id=4 HTTP/1.1" 200 722 http-bio-80-exec-7 16
